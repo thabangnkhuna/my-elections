@@ -10,5 +10,8 @@ COPY . /app
 # Install the project dependencies
 RUN pip install -r requirements.txt
 
-# Run the Django development server
+# Install Pillow for image handling
+RUN pip install Pillow
+
+# Specify the command to run your Django application
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
