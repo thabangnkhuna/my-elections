@@ -1,0 +1,141 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - African Freedom Fighters</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add custom styles for the header section */
+        header {
+            background-color: #ff0000; /* Bright red color */
+            padding: 20px;
+            text-align: center;
+            color: #fff; /* White text color */
+        }
+
+        /* Add custom styles for the login link */
+        .login-link {
+            color: #fff; /* White text color */
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px; /* Add some space between links */
+        }
+
+        /* Add custom styles for the footer section */
+        footer {
+            background-color: #006400; /* Dark green color */
+            padding: 10px;
+            text-align: center;
+            color: #fff; /* White text color */
+        }
+
+        /* Add custom styles for the main content section */
+        .main-content {
+            background-color: #f5f5f5; /* Light gray color */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Add custom styles for the buttons */
+        .btn-primary {
+            background-color: #ff6347; /* Tomato color */
+            border-color: #ff4500; /* Orange-Red color */
+            font-size: 14px; /* Reduce button font size */
+            padding: 6px 12px; /* Reduce button padding */
+        }
+
+        .btn-primary:hover {
+            background-color: #ff4500; /* Orange-Red color */
+            border-color: #ff4500; /* Orange-Red color */
+        }
+
+        .btn-success {
+            background-color: #32cd32; /* Lime green color */
+            border-color: #006400; /* Dark green color */
+            font-size: 14px; /* Reduce button font size */
+            padding: 6px 12px; /* Reduce button padding */
+        }
+
+        .btn-success:hover {
+            background-color: #006400; /* Dark green color */
+            border-color: #006400; /* Dark green color */
+        }
+
+        /* Add custom styles for the signup link */
+        .signup-link {
+            color: #fff; /* White text color */
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px; /* Add some space between links */
+        }
+
+        /* Add custom styles for the AFF-logos.jpeg image */
+        .img-logo {
+            max-width: 200px; /* Adjust the width as needed */
+        }
+    </style>
+</head>
+<body>
+    <!-- Add a header section with a banner image -->
+    <header>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">African Freedom Fighters</a>
+                <ul class="navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'member_dashboard' %}">Dashboard</a></li>
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link login-link" href="{% url 'login' %}">Login</a></li>
+                        <li class="nav-item"><a class="nav-link signup-link" href="{% url 'signup' %}">Sign Up</a></li>
+                    {% endif %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                    <!-- Add more links to other pages here if needed -->
+                </ul>
+            </div>
+        </nav>
+
+        <img src="{% static 'images/AFF-logos.jpeg' %}" alt="African Freedom Fighters" class="img-fluid img-logo">
+        <h1 style="margin: 0; padding-top: 10px;">Welcome to The African Freedom Fighter webpage</h1>
+    </header>
+
+    <div class="container mt-4">
+        <!-- ... (login form section removed) ... -->
+
+        <!-- Add a main content section -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="main-content">
+                    <h2>About African Freedom Fighters</h2>
+                    <p>
+                        The African Freedom Fighters (AFF) is a radical and militant African emancipation movement formed in the year 2013 with the aim of bringing together revolutionary, militant activists, community-based organizations, as well as lobby groups under the umbrella of the political party pursuing the struggle of African emancipation.
+                    </p>
+                    <!-- Rest of the content here... -->
+
+                    <!-- Add links to other pages -->
+                    <h2>Explore</h2>
+                    <ul>
+                        <li><a href="{% url 'members' %}">Members</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <!-- Add more links to other pages here if needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Add a footer section -->
+    <footer>
+        <p>Contact us: contact@africanfreedomfighters.com</p>
+    </footer>
+</body>
+</html>

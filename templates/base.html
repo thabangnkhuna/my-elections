@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Elections{% endblock %}</title>
+    <!-- Your other head content here -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Add a custom CSS file for styling -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'members' %}">Members</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <!-- Add more links here if you have additional pages -->
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="header">
+        <img src="{% static 'images/AFF-logos.jpg' %}" alt="Header Image"> <!-- Add a header image -->
+    </div>
+    <div class="content">
+        {% block content %}
+        <!-- Content of the specific page goes here -->
+        {% endblock %}
+    </div>
+    <div class="footer">
+        <!-- Add a footer section if desired -->
+    </div>
+</body>
+</html>

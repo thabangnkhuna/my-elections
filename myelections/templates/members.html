@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Members - African Freedom Fighters</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <!-- Add your custom CSS style sheet -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+    <style>
+        /* Add custom styles for the header section */
+        header {
+            background-color: #ff0000; /* Bright red color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Add custom styles for the login link */
+        .login-link {
+            position: absolute;
+            top: 20px;
+            right: 100px; /* Move the login link to the right */
+            color: #fff; /* White text color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Add custom styles for the navigation links */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            color: #ff0000; /* Bright red color */
+        }
+
+        /* Add custom styles for the footer section */
+        footer {
+            background-color: #006400; /* Dark green color */
+            padding: 10px;
+            text-align: center;
+            color: #fff; /* White text color */
+        }
+
+        /* Add custom styles for member images */
+        .member-image {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Add a header section with a banner image -->
+    <header>
+        <img src="{% static 'images/AFF-logos.jpeg' %}" alt="African Freedom Fighters" width="200" height="100">
+        <h1>Members - African Freedom Fighters</h1>
+        <!-- Add navigation links -->
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'members' %}">Members</a>
+            <a href="{% url 'about' %}">About</a>
+            <!-- Add more links to other pages here if needed -->
+            {% if not user.is_authenticated %}
+            <a class="login-link" href="{% url 'login' %}">Login</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <!-- Add a main content section -->
+    <main>
+        <h2>Our Party Members</h2>
+        {% for member in members %}
+        <div>
+            <h3>{{ member.first_name }} {{ member.last_name }}</h3>
+            {% if member.image %}
+            <img class="member-image" src="{{ member.image.url }}" alt="{{ member.first_name }} {{ member.last_name }}">
+            {% endif %}
+        </div>
+        {% endfor %}
+    </main>
+
+    <!-- Add a footer section -->
+    <footer>
+        <p>Contact us: contact@africanfreedomfighters.com</p>
+    </footer>
+</body>
+</html>

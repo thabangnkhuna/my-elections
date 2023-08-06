@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About - African Freedom Fighters</title>
+    <style>
+        body {
+            background-color: lightgrey;
+        }
+        header {
+            background-color: #ff4500; /* Red-Orange color */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        footer {
+            background-color: #006400; /* Dark Green color */
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-bottom: 60px; /* Add margin at the bottom to prevent footer overlap */
+        }
+        /* Add custom styles for the navigation links */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            color: #ff4500; /* Red-Orange color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>African Freedom Fighters</h1>
+        <!-- Add navigation links -->
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'members' %}">Members</a>
+            <a href="{% url 'about' %}">About</a>
+            <!-- Add more links to other pages here if needed -->
+        </nav>
+    </header>
+
+    <div class="container">
+    <h1>About Our Party</h1>
+    <p>We are a new political party dedicated to serving the people and creating positive change in our society.</p>
+    <p>Our party members are passionate about making a difference and working towards a better future for all.</p>
+
+    <h2>Background of the African Freedom Fighters</h2>
+    <p>The African Freedom Fighters (AFF) is a radical and militant African emancipation movement, formed in the year 2013 with the aim of bringing together revolutionary, militant activists, community-based organizations as well as lobby groups under the umbrella of the political party pursuing the struggle of African emancipation.</p>
+    <p>The AFF is an anti-imperialist and leftist movement with an internationalist outlook anchored by popular grassroots’ formations and struggles. The political party has thus drawn inspiration from the broad Marxist-Leninist tradition school of thought in their analysis of the state, imperialism, culture, and class contradictions in every society.</p>
+
+    <h2>Vision of the AFF</h2>
+    <p>The AFF will, with determination and consistency, associate with The protest movement in South Africa and will also join in struggles that defy The unjust laws.</p>
+
+    <h2>Mission of The AFF</h2>
+    <p>The AFF is a South African movement with a progressive internationalist outlook, which seeks to engage global progressive movements. We believe that the best contribution we can make in the national and international struggle against global imperialism is to rid our country of imperialist domination.</p>
+
+    <h2>The AFF Pillars of African Emancipation</h2>
+    <ol>
+        <li>Expropriation of South Africa’s land without compensation for equal redistribution in use.</li>
+        <li>Nationalisation of mines, banks, and other strategic sectors of the economy, without compensation.</li>
+        <li>Building state and government capacity, which will lead to The abolishment of tenders.</li>
+        <li>Free quality education, healthcare, houses, and sanitation.</li>
+        <li>Protected industrial development to create sustainable jobs which includes the introduction of minimum wages in order to bridge the gap between the wealthy and the poor, close the apartheid wage gap, and promote rapid career opportunities for Africans in the workplace.</li>
+        <li>Massive development of the African economy and advocating for a shift from reconciliation to justice in the entire continent.</li>
+        <li>Foster an accountable, corrupt-free government and society.</li>
+    </ol>
+
+    <h2>The Freedom Charter</h2>
+    <p>The African Freedom Fighters appreciates the role played by the fathers and mothers of South Africa’s liberation movement. The movement thus draws inspiration from the radical, working class’ interpretation of the Freedom Charter since its adoption in the year 1955, where the charter was given various meanings. The AFF’s interpretation of the Freedom Charter, however, is that South Africa indeed belongs to all who live in it, and ownership of South Africa’s African resources and access to opportunities should reflect the country belonging to its people. The transfer of mineral wealth beneath the soil, monopoly industries, and banks mean nationalisation of such and the charter accepts that while the state is in command and in control of the commanding heights of South Africa’s economy, “people shall have equal rights to trade where they choose, to manufacture and to enter all trades, crafts, and professions”, meaning that there will never be wholesale nationalisation of the state control of every sector of South Africa’s economy. Nationalisation of strategic sectors and assets will be blended with a strong industrial policy to support social and African development.</p>
+    </div>
+
+    <!-- Add a footer section -->
+    <footer>
+        <p>Contact us: contact@africanfreedomfighters.com</p>
+    </footer>
+</body>
+</html>
