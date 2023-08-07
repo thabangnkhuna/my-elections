@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Installation &#8212; myParty documentation 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Configuration" href="configuration.html" />
+    <link rel="prev" title="MyParty Django Project Documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h1>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">¶</a></h2>
+<p>Before you install MyParty, ensure you have the following installed:</p>
+<ul class="simple">
+<li><p>Python (version 3.6 or higher)</p></li>
+<li><p>Django (version 3.0 or higher)</p></li>
+</ul>
+</section>
+<section id="step-1-clone-the-repository">
+<h2>Step 1: Clone the Repository<a class="headerlink" href="#step-1-clone-the-repository" title="Permalink to this heading">¶</a></h2>
+<p>$ git clone <a class="reference external" href="https://github.com/thabangnkhuna/myparty.git">https://github.com/thabangnkhuna/myparty.git</a>
+$ cd myparty</p>
+</section>
+<section id="step-2-set-up-virtual-environment">
+<h2>Step 2: Set up Virtual Environment<a class="headerlink" href="#step-2-set-up-virtual-environment" title="Permalink to this heading">¶</a></h2>
+<p>$ python -m venv venv
+$ source venv/bin/activate (for Windows: venvScriptsactivate)</p>
+</section>
+<section id="step-3-install-dependencies">
+<h2>Step 3: Install Dependencies<a class="headerlink" href="#step-3-install-dependencies" title="Permalink to this heading">¶</a></h2>
+<p>$ pip install -r requirements.txt</p>
+</section>
+<section id="step-4-run-migrations">
+<h2>Step 4: Run Migrations<a class="headerlink" href="#step-4-run-migrations" title="Permalink to this heading">¶</a></h2>
+<p>$ python manage.py migrate</p>
+</section>
+<section id="step-5-create-superuser-optional">
+<h2>Step 5: Create Superuser (Optional)<a class="headerlink" href="#step-5-create-superuser-optional" title="Permalink to this heading">¶</a></h2>
+<p>$ python manage.py createsuperuser</p>
+</section>
+<section id="step-6-start-the-development-server">
+<h2>Step 6: Start the Development Server<a class="headerlink" href="#step-6-start-the-development-server" title="Permalink to this heading">¶</a></h2>
+<p>$ python manage.py runserver</p>
+<p>You’re all set! Open your browser and visit <a class="reference external" href="http://localhost:8000">http://localhost:8000</a> to access MyParty.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">myParty documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-clone-the-repository">Step 1: Clone the Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-set-up-virtual-environment">Step 2: Set up Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-install-dependencies">Step 3: Install Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-run-migrations">Step 4: Run Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-5-create-superuser-optional">Step 5: Create Superuser (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-6-start-the-development-server">Step 6: Start the Development Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">MyParty Django Project Documentation</a></li>
+      <li>Next: <a href="configuration.html" title="next chapter">Configuration</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Thabang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/installation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

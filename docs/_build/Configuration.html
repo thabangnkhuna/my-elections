@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Configuration &#8212; myParty documentation 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h1>
+<p>MyParty is built using Django, and the application can be configured through various settings and environment variables.</p>
+<section id="database-configuration">
+<h2>Database Configuration<a class="headerlink" href="#database-configuration" title="Permalink to this heading">¶</a></h2>
+<p>By default, MyParty uses the SQLite database. You can change the database settings in the <cite>settings.py</cite> file.</p>
+<p>Example settings:</p>
+<dl>
+<dt>DATABASES = {</dt><dd><dl class="simple">
+<dt>‘default’: {</dt><dd><p>‘ENGINE’: ‘django.db.backends.postgresql’,
+‘NAME’: ‘mypartydb’,
+‘USER’: ‘dbuser’,
+‘PASSWORD’: ‘dbpassword’,
+‘HOST’: ‘localhost’,
+‘PORT’: ‘5432’,</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</section>
+<section id="email-configuration">
+<h2>Email Configuration<a class="headerlink" href="#email-configuration" title="Permalink to this heading">¶</a></h2>
+<p>To configure email settings, update the <cite>settings.py</cite> file with your SMTP server details.</p>
+<p>Example settings:</p>
+<p>EMAIL_BACKEND = ‘django.core.mail.backends.smtp.EmailBackend’
+EMAIL_HOST = ‘smtp.example.com’
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = <a class="reference external" href="mailto:'your_email&#37;&#52;&#48;example&#46;com">‘your_email<span>&#64;</span>example<span>&#46;</span>com</a>’
+EMAIL_HOST_PASSWORD = ‘your_email_password’</p>
+<p>For more configuration options, refer to the Django documentation.</p>
+</section>
+<section id="custom-settings">
+<h2>Custom Settings<a class="headerlink" href="#custom-settings" title="Permalink to this heading">¶</a></h2>
+<p>If you need to add custom settings for your application, create a <cite>settings.py</cite> file in the project’s root directory and import it in the main <cite>settings.py</cite>.</p>
+<p>Example custom settings:</p>
+<p># settings.py
+ENABLE_FEATURE_X = True
+MAX_PARTY_GUESTS = 50</p>
+<p># main settings.py
+from myparty.settings import ENABLE_FEATURE_X, MAX_PARTY_GUESTS</p>
+<p>Be sure to handle sensitive information securely and avoid hardcoding sensitive data in configuration files.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">myParty documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#database-configuration">Database Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#email-configuration">Email Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-settings">Custom Settings</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="installation.html" title="previous chapter">Installation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Thabang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/configuration.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
